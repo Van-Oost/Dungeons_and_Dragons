@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encounter D&D</title>
+    <link rel="stylesheet" href="css/encounter.css">
+  </head>
+  <body onLoad="hideAll()">
+    <main>
+        <img class="logo" src="/images/Ampersand.png" alt="logo d y d">
+        <p class="boton2" onclick="sortTable()">ORDENAR</p>
+        <p class="boton" onclick="turnoAnterior(turnoJ)">PREV</p>
+        <p class="boton" onclick="proximoTurno(turnoJ)">NEXT</p>
+        <p class="boton3" onclick="fight(turnoJ,rondaJ)">START</p>
+        <p id="roundDisplay">-</p>
+      
+       <table id="tabla">
+            <tr>
+              <th onclick="sortTable()">Iniciativa</th>
+              <th >Personaje</th> 
+              <th>HP</th>
+              <th class="barrita">/</th>
+              <th>MAX</th>
+            </tr>
+
+            <tr class="jugador">
+              <td class="td1" id="ranger" onclick="cambiarIniciativa(this.id)">5</td>
+              <td id="char0name" onclick="cambiarNombre(this.id)">FehrMin</td> 
+              <td id="walfardHp" onclick="cambiarHp(this.id)">32</td>
+              <td class="barrita">/</td>
+              <td id="walfardTotal" onclick="cambiarTotal(this.id)">32</td>
+            </tr>
+
+            <tr class="jugador">
+              <td class="td1" id="walfard" onclick="cambiarIniciativa(this.id)">5</td>
+              <td id="char1name" onclick="cambiarNombre(this.id)">Walfard</td> 
+              <td id="walfardHp" onclick="cambiarHp(this.id)">25</td>
+              <td class="barrita">/</td>
+              <td id="walfardTotal" onclick="cambiarTotal(this.id)">25</td>
+            </tr>
+            
+            <tr class="jugador">
+              <td class="td1" id="enano" onclick="cambiarIniciativa(this.id)">10</td>
+              <td id="char2name" onclick="cambiarNombre(this.id)">Thurmin</td> 
+              <td id="enanoHp" onclick="cambiarHp(this.id)">30</td>
+              <td class="barrita">/</td>
+              <td id="enanoTotal" onclick="cambiarTotal(this.id)">30</td>
+            </tr>
+            <tr class="jugador">
+              <td class="td1" id="rougue" onclick="cambiarIniciativa(this.id)">0</td>
+              <td id="char3name" onclick="cambiarNombre(this.id)">Belmin</td> 
+              <td id="rougueHp" onclick="cambiarHp(this.id)">31</td>
+              <td class="barrita">/</td>
+              <td id="rougueTotal" onclick="cambiarTotal(this.id)">31</td>
+            </tr>
+            <tr class="jugador">
+              <td class="td1" id="gato" onclick="cambiarIniciativa(this.id)">20</td>
+              <td id="char4name" onclick="cambiarNombre(this.id)">Inigo</td> 
+              <td id="gatoHp" onclick="cambiarHp(this.id)">31</td>
+              <td class="barrita">/</td>
+              <td id="gatoTotal" onclick="cambiarTotal(this.id)">31</td>
+            </tr>
+            <tr class="monster" id="monster1">
+              <td class="td1" id="monst1" onclick="cambiarIniciativa(this.id)">0</td>
+              <td id="monster1name" onclick="cambiarNombre(this.id)">Monst 1</td> 
+              <td id="monst1Hp" onclick="cambiarHp(this.id)">0</td>
+              <td class="barrita">/</td>
+              <td id="monst1Totales" onclick="cambiarTotal(this.id)">-</td>
+            </tr>
+            <tr class="monster" id="monster2">
+              <td class="td1" id="monst2" onclick="cambiarIniciativa(this.id)">0</td>
+              <td id="monster2name" onclick="cambiarNombre(this.id)">Monst 2</td> 
+              <td id="monst2Hp" onclick="cambiarHp(this.id)">0</td>
+              <td class="barrita">/</td>
+              <td id="monst2Totales" onclick="cambiarTotal(this.id)">-</td>
+            </tr>
+            <tr class="monster" id="monster3">
+              <td class="td1" id="monst3" onclick="cambiarIniciativa(this.id)">0</td>
+              <td id="monster3name" onclick="cambiarNombre(this.id)">Monst 3</td> 
+              <td id="monst3Hp" onclick="cambiarHp(this.id)">0</td>
+              <td class="barrita">/</td>
+              <td id="monst3Totales" onclick="cambiarTotal(this.id)">-</td>
+            </tr>
+            <tr class="monster" id="monster4">
+              <td class="td1" id="monst4" onclick="cambiarIniciativa(this.id)">0</td>
+              <td id="monster4name" onclick="cambiarNombre(this.id)">Monst 4</td> 
+              <td id="monst4Hp" onclick="cambiarHp(this.id)">0</td>
+              <td class="barrita">/</td>
+              <td id="monst4Totales" onclick="cambiarTotal(this.id)">-</td>
+            </tr>
+          </table>
+
+          <SELECT class="boton" id="options" onchange="toggleOption(this)">
+              <OPTION value="-">-</OPTION>
+              <OPTION value="monster1">Monstruo 1</OPTION>
+              <OPTION value="monster2">Monstruo 2</OPTION>
+              <OPTION value="monster3">Monstruo 3</OPTION>
+              <OPTION value="monster4">Monstruo 4</OPTION>
+          </SELECT>
+          <p class="boton" onclick="hideAll()">CLEAR</p>
+          
+
+    </main>
+    
+    <script src="js/Encounter.js"></script>
+  </body>
+</html>

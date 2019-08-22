@@ -1,0 +1,104 @@
+body {
+  background-image: url(/images/tiamat.jpg);
+  background-size: 100% auto;
+}
+
+main {
+  padding: 2rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-top: 5rem;
+  background-color: white;
+  overflow: auto;
+}
+  
+.logo {
+  height: 4rem;
+  float: right;
+}
+
+.boton {
+  display: inline-block;
+  margin: 0.5rem;
+  color: white;
+  background-color: rgb(133, 133, 133);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  
+}
+
+.boton2 {
+  display: inline-block;
+  margin: 1rem;
+  color: white;
+  background-color: rgb(173, 14, 14);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+
+.boton3 {
+  display: inline-block;
+  margin: 1rem;
+  color: white;
+  background-color: rgb(41, 41, 41);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+
+#roundDisplay {
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin-right: auto;
+  margin-left: 8rem;
+}
+
+#tabla {
+  font-size: 1.3rem;
+  width: 30rem;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+tr:nth-child(odd).jugador{
+  background-color:rgb(209, 209, 209);
+}
+
+th {
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+  padding: 0.9rem 2rem;
+}
+
+td {
+  padding: 0.5rem 2rem;
+}
+
+#tabla.td1 {
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+}
+
+.monster {
+  background-color: rgb(173, 14, 14);
+  color: white;
+}
+
+.barrita {
+  padding: 10px;
+}
+
+.turnoJugador {
+  color: white;
+  background-color: rgb(41, 41, 41) !important;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: solid red;
+}
